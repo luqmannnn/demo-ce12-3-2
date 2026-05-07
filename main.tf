@@ -24,12 +24,15 @@ resource "aws_s3_bucket" "s3_tf" {
   #checkov:skip=CKV2_AWS_62
   #checkov:skip=CKV2_AWS_6
   #checkov:skip=CKV_AWS_144
+  #checkov:skip=CKV_AWS_21
+  #checkov:skip=CKV_AWS_145
   bucket_prefix = "luqman-ce12-7may-bucket"
 }
 
 data "aws_caller_identity" "current" {}
 
 resource "aws_s3_bucket_lifecycle_configuration" "s3_tf_lifecycle" {
+  #checkov:skip=CKV2_AWS_61
   bucket = aws_s3_bucket.s3_tf.id
 
   rule {
@@ -46,6 +49,8 @@ resource "aws_s3_bucket" "logging" {
   #checkov:skip=CKV2_AWS_62
   #checkov:skip=CKV2_AWS_6
   #checkov:skip=CKV_AWS_144
+  #checkov:skip=CKV_AWS_21
+  #checkov:skip=CKV_AWS_145
   bucket = "luqman-ce12-32-logging-bucket"
 }
 

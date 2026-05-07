@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "sctp-ce12-tfstate" # Change this
+    bucket = "sctp-ce12-tfstate-bucket" # Change this
     key    = "arista.tfstate" # Change this - any name will do that need to be created.
     region = "ap-southeast-1"
   }

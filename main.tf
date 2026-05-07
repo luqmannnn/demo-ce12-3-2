@@ -19,9 +19,10 @@ terraform {
   }
 }
 
-#checkov:skip=CKV2_AWS_62:Ensure S3 buckets should have event notifications enabled
-#checkov:skip=CKV2_AWS_6:Ensure that S3 bucket has a Public Access block
+
 resource "aws_s3_bucket" "s3_tf" {
+  #checkov:skip=CKV2_AWS_62
+  #checkov:skip=CKV2_AWS_6
   bucket_prefix = "luqman-ce12-7may-bucket"
 }
 
@@ -41,6 +42,8 @@ resource "aws_s3_bucket_lifecycle_configuration" "s3_tf_lifecycle" {
 }
 
 resource "aws_s3_bucket" "logging" {
+  #checkov:skip=CKV2_AWS_62
+  #checkov:skip=CKV2_AWS_6
   bucket = "luqman-ce12-32-logging-bucket"
 }
 

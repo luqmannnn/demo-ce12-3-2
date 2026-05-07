@@ -24,6 +24,8 @@ resource "aws_s3_bucket" "s3_tf" {
   bucket_prefix = "luqman-ce12-7may-bucket"
 }
 
+data "aws_caller_identity" "current" {}
+
 resource "aws_s3_bucket_lifecycle_configuration" "s3_tf_lifecycle" {
   bucket = aws_s3_bucket.s3_tf.id
 

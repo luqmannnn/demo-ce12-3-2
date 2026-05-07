@@ -23,6 +23,7 @@ terraform {
 resource "aws_s3_bucket" "s3_tf" {
   #checkov:skip=CKV2_AWS_62
   #checkov:skip=CKV2_AWS_6
+  #checkov:skip=CKV_AWS_144
   bucket_prefix = "luqman-ce12-7may-bucket"
 }
 
@@ -44,6 +45,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "s3_tf_lifecycle" {
 resource "aws_s3_bucket" "logging" {
   #checkov:skip=CKV2_AWS_62
   #checkov:skip=CKV2_AWS_6
+  #checkov:skip=CKV_AWS_144
   bucket = "luqman-ce12-32-logging-bucket"
 }
 

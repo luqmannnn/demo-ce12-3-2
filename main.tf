@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   required_version = "~> 1.15.0"
-  
+
   backend "s3" {
     bucket = "sctp-ce12-tfstate-bucket" # Change this
     key    = "luqman-ce12-7may.tfstate" # Change this
